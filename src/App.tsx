@@ -1,6 +1,19 @@
+import { useEffect } from 'react';
 import { Navbar, Hero, Footer, ProfileSection, ContentGrid } from '@iniguezmarc/design-system';
 
 function App() {
+  // Initialize theme
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
   const navLinks = [
     { label: 'Home', href: '#home', active: true },
     { label: 'About', href: '#about' },
