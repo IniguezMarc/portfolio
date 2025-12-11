@@ -1,18 +1,43 @@
-import { Navbar } from '@iniguezmarc/design-system';
-import { Hero } from '@iniguezmarc/design-system';
-import { Footer } from '@iniguezmarc/design-system';
+import { Navbar, Hero, Footer, ProfileSection, ContentGrid } from '@iniguezmarc/design-system';
 
 function App() {
   const navLinks = [
     { label: 'Home', href: '#home', active: true },
-    { label: 'Projects', href: '#projects' },
     { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
 
   const socialLinks = [
     { platform: 'GitHub', url: 'https://github.com/IniguezMarc' },
     { platform: 'LinkedIn', url: 'https://linkedin.com/in/marc-iniguez' },
+  ];
+
+  const projects = [
+    {
+      id: "1",
+      title: "Portfolio Website",
+      description: "My personal portfolio built with React, Vite, and a custom Design System.",
+      image: "/portfolio/project1.png",
+      tags: ["React", "TypeScript", "Tailwind"],
+      url: "https://github.com/IniguezMarc/portfolio"
+    },
+    {
+      id: "2",
+      title: "E-Commerce Dashboard",
+      description: "A comprehensive dashboard for managing products, orders, and analytics.",
+      image: "/portfolio/project2.png",
+      tags: ["Next.js", "Prisma", "Chart.js"],
+      url: "#"
+    },
+    {
+      id: "3",
+      title: "Social Connect App",
+      description: "Mobile-first social networking application connecting developers.",
+      image: "/portfolio/project3.png",
+      tags: ["React Native", "Firebase"],
+      url: "#"
+    }
   ];
 
   return (
@@ -38,19 +63,28 @@ function App() {
           />
         </div>
 
-        {/* Placeholder for Projects Section */}
-        <section id="projects" className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="p-6 border rounded-xl dark:border-gray-800">
-                <h3 className="text-xl font-bold mb-2 dark:text-white">Portfolio</h3>
-                <p className="text-gray-600 dark:text-gray-400">This current website, built with my own design system.</p>
-              </div>
-              {/* More projects to come */}
-            </div>
-          </div>
-        </section>
+        <ProfileSection
+          id="about"
+          title="About Me"
+          avatarUrl="/portfolio/avatar.png"
+          bio={`I am a passionate Frontend Developer with a keen eye for design and a love for clean code. 
+          
+          I specialize in building scalable web applications using React, TypeScript, and modern CSS frameworks. My goal is to create seamless user experiences that solve real-world problems.`}
+          skills={["React", "TypeScript", "Tailwind CSS", "Node.js", "Git", "Figma"]}
+          skillsTitle="My Tech Stack"
+        />
+
+        <div id="projects">
+          <ContentGrid
+            title="Featured Projects"
+            items={projects}
+            itemButtonLabel="View Code"
+            onItemClick={(id) => console.log(`Clicked project ${id}`)}
+          />
+        </div>
+
+        {/* Contact Placeholder (Footer covers most of this purpose usually, but specific form could go here) */}
+        <div id="contact"></div>
 
       </main>
 
