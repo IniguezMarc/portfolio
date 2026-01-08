@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { Navbar, Hero, Footer, ProfileSection, ContentGrid } from '@iniguezmarc/design-system';
+import { useLanguage } from './LanguageContext';
 
 function App() {
+  const { t, language, setLanguage } = useLanguage();
+
   // Initialize theme
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -14,13 +17,6 @@ function App() {
     }
   }, []);
 
-  const navLinks = [
-    { label: 'Home', href: '#home', active: true },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
   const socialLinks = [
     { platform: 'GitHub', url: 'https://github.com/IniguezMarc' },
     { platform: 'LinkedIn', url: 'https://linkedin.com/in/marc-iniguez' },
@@ -29,24 +25,24 @@ function App() {
   const projects = [
     {
       id: "1",
-      title: "Portfolio Website",
-      description: "My personal portfolio built with React, Vite, and a custom Design System.",
+      title: t.projects.portfolio.title,
+      description: t.projects.portfolio.description,
       image: "/portfolio/project1.png",
       tags: ["React", "TypeScript", "Tailwind"],
       url: "https://github.com/IniguezMarc/portfolio"
     },
     {
       id: "2",
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive dashboard for managing products, orders, and analytics.",
+      title: t.projects.dashboard.title,
+      description: t.projects.dashboard.description,
       image: "/portfolio/project2.png",
       tags: ["Next.js", "Prisma", "Chart.js"],
       url: "#"
     },
     {
       id: "3",
-      title: "Social Connect App",
-      description: "Mobile-first social networking application connecting developers.",
+      title: t.projects.social.title,
+      description: t.projects.social.description,
       image: "/portfolio/project3.png",
       tags: ["React Native", "Firebase"],
       url: "#"
@@ -57,41 +53,42 @@ function App() {
     <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
       <Navbar
         logo="M.I."
-        links={navLinks}
+        links={[]}
         actions={[
-          { label: 'Resume', onClick: () => console.log('Download Resume'), variant: 'primary' }
+          { label: t.common.resume, onClick: () => console.log('Download Resume'), variant: 'primary' }
         ]}
+        enableLanguageToggle={true}
+        language={language}
+        onLanguageChange={(lang: 'en' | 'es') => setLanguage(lang)}
       />
 
       <main>
         <div id="home">
           <Hero
-            greeting="Hi, I'm Marc"
-            title="Frontend Developer"
-            subtitle="Building beautiful, responsive, and user-friendly web experiences with modern technologies."
+            greeting={t.hero.greeting}
+            title={t.hero.title}
+            subtitle={t.hero.subtitle}
             actions={[
-              { label: 'View Projects', onClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }), variant: 'primary' },
-              { label: 'Contact Me', onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), variant: 'secondary' }
+              { label: t.hero.viewProjects, onClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }), variant: 'primary' },
+              { label: t.hero.contactMe, onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), variant: 'secondary' }
             ]}
           />
         </div>
 
         <ProfileSection
           id="about"
-          title="About Me"
+          title={t.about.title}
           avatarUrl="/portfolio/avatar.png"
-          bio={`I am a passionate Frontend Developer with a keen eye for design and a love for clean code. 
-          
-          I specialize in building scalable web applications using React, TypeScript, and modern CSS frameworks. My goal is to create seamless user experiences that solve real-world problems.`}
+          bio={t.about.bio}
           skills={["React", "TypeScript", "Tailwind CSS", "Node.js", "Git", "Figma"]}
-          skillsTitle="My Tech Stack"
+          skillsTitle={t.about.skillsTitle}
         />
 
         <div id="projects">
           <ContentGrid
-            title="Featured Projects"
+            title={t.projects.title}
             items={projects}
-            itemButtonLabel="View Code"
+            itemButtonLabel={t.projects.viewCode}
             onItemClick={(id) => console.log(`Clicked project ${id}`)}
           />
         </div>
@@ -102,7 +99,7 @@ function App() {
       </main>
 
       <Footer
-        copyrightOwner="Marc Iñiguez"
+        copyrightOwner={t.footer.copyright}
         socialLinks={socialLinks}
       />
     </div>
