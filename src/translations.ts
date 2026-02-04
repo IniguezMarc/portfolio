@@ -1,87 +1,75 @@
 export const translations = {
     en: {
-        nav: {
-            contact: 'Contact',
+        navbar: {
+            contact: "Let's Talk",
         },
         hero: {
-            greeting: "Hi, I'm Marc",
-            title: 'Frontend Developer',
-            subtitle: 'Building beautiful, responsive, and user-friendly web experiences with modern technologies.',
-            viewProjects: 'View Projects',
-            contactMe: 'Contact Me',
+            prefix: "Hi, I'm Marc",
+            typewriter: "Software Developer",
+            subtitle: "Building web applications with",
+            highlight: "modern tools",
+            viewWork: "View Work",
+            downloadCv: "Download CV",
         },
         about: {
-            title: 'About Me',
-            bio: `I am a passionate Frontend Developer with a keen eye for design and a love for clean code. 
-      
-      I specialize in building scalable web applications using React, TypeScript, and modern CSS frameworks. My goal is to create seamless user experiences that solve real-world problems.`,
-            skillsTitle: 'My Tech Stack',
+            title: "About",
+            highlight: "Me",
+            description: `I'm a Software Engineer in training, currently finishing my degree at UOC. I enjoy working with React and TypeScript to build clean, maintainable applications. I'm especially interested in AI and automation — always looking for ways to improve workflows through technology.`,
+            philosophyTitle: "What I Value",
+            philosophyItems: [
+                "Clean Code",
+                "User Experience",
+                "Continuous Learning"
+            ] as [string, string, string],
         },
         projects: {
-            title: 'Featured Projects',
-            viewCode: 'View Code',
-            portfolio: {
-                title: 'Portfolio Website',
-                description: 'My personal portfolio built with React, Vite, and a custom Design System.',
-            },
-            dashboard: {
-                title: 'E-Commerce Dashboard',
-                description: 'A comprehensive dashboard for managing products, orders, and analytics.',
-            },
-            social: {
-                title: 'Social Connect App',
-                description: 'Mobile-first social networking application connecting developers.',
-            }
+            title: "Projects",
+            subtitle: "Some things I've been working on.",
+            viewCaseStudy: "View Project",
         },
         footer: {
-            copyright: 'Marc Iñiguez',
+            ctaTitle: "Let's connect",
+            ctaSubtitle: "I'm open to freelance projects and full-time opportunities.",
+            ctaAction: "Get in Touch",
+            legalNotice: "Privacy Policy",
+            copyright: "Marc Iñiguez",
         },
-        common: {
-            resume: 'Resume',
-            downloadResume: 'Download Resume',
-        }
     },
     es: {
-        nav: {
-            contact: 'Contacto',
+        navbar: {
+            contact: "Hablemos",
         },
         hero: {
-            greeting: "Hola, soy Marc",
-            title: 'Desarrollador Frontend',
-            subtitle: 'Creando experiencias web hermosas, responsivas y fáciles de usar con tecnologías modernas.',
-            viewProjects: 'Ver Proyectos',
-            contactMe: 'Contáctame',
+            prefix: "Hola, soy Marc",
+            typewriter: "Desarrollador de Software",
+            subtitle: "Construyendo aplicaciones web con",
+            highlight: "herramientas modernas",
+            viewWork: "Ver Trabajo",
+            downloadCv: "Descargar CV",
         },
         about: {
-            title: 'Sobre Mí',
-            bio: `Soy un apasionado Desarrollador Frontend con buen ojo para el diseño y amor por el código limpio.
-      
-      Me especializo en construir aplicaciones web escalables usando React, TypeScript y frameworks CSS modernos. Mi objetivo es crear experiencias de usuario fluidas que resuelvan problemas del mundo real.`,
-            skillsTitle: 'Mis Tecnologías',
+            title: "Sobre",
+            highlight: "Mí",
+            description: `Soy un Ingeniero de Software en formación, actualmente terminando mi carrera en la UOC. Disfruto trabajando con React y TypeScript para crear aplicaciones limpias y mantenibles. Me interesa especialmente la IA y la automatización — siempre buscando formas de mejorar flujos de trabajo con tecnología.`,
+            philosophyTitle: "Lo Que Valoro",
+            philosophyItems: [
+                "Código Limpio",
+                "Experiencia de Usuario",
+                "Aprendizaje Continuo"
+            ] as [string, string, string],
         },
         projects: {
-            title: 'Proyectos Destacados',
-            viewCode: 'Ver Código',
-            portfolio: {
-                title: 'Sitio Web Portfolio',
-                description: 'Mi portafolio personal construido con React, Vite y un Sistema de Diseño personalizado.',
-            },
-            dashboard: {
-                title: 'Panel E-Commerce',
-                description: 'Un panel completo para gestionar productos, pedidos y análisis.',
-            },
-            social: {
-                title: 'App Social Connect',
-                description: 'Aplicación de redes sociales mobile-first para conectar desarrolladores.',
-            }
+            title: "Proyectos",
+            subtitle: "Algunas cosas en las que he estado trabajando.",
+            viewCaseStudy: "Ver Proyecto",
         },
         footer: {
-            copyright: 'Marc Iñiguez',
+            ctaTitle: "Conectemos",
+            ctaSubtitle: "Estoy abierto a proyectos freelance y oportunidades de tiempo completo.",
+            ctaAction: "Contactar",
+            legalNotice: "Política de Privacidad",
+            copyright: "Marc Iñiguez",
         },
-        common: {
-            resume: 'Currículum',
-            downloadResume: 'Descargar CV',
-        }
     }
 };
 
