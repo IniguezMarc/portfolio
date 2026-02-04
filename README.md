@@ -9,6 +9,4 @@ I'm a Software Engineer in training, currently finishing my degree at UOC. I enj
 - **Check out my work**: [https://github.com/IniguezMarc](https://github.com/IniguezMarc)
 - **Connect on LinkedIn**: [https://www.linkedin.com/in/iniguezmarc](https://www.linkedin.com/in/iniguezmarc)
 
-## Live Demo
-
 [View Portfolio](https://iniguezmarc.github.io/portfolio/)
