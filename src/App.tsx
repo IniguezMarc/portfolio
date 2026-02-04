@@ -41,7 +41,7 @@ function App() {
         : "A React component library I built for my projects. Includes reusable components, Storybook docs, and dark mode support.",
       image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=800&q=80",
       tags: ["React", "TypeScript", "Storybook", "Tailwind"],
-      url: "https://github.com/IniguezMarc/design-system"
+      url: "https://iniguezmarc.github.io/design-system/"
     },
     {
       id: "2",
