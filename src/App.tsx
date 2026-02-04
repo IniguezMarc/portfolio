@@ -51,11 +51,10 @@ function App() {
         : "Interactive tool for visualizing pathfinding algorithms like A*, Dijkstra, and BFS with step-by-step animations.",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80",
       tags: ["React", "Algorithms", "Canvas", "TypeScript"],
-      url: "https://iniguezmarc.github.io/pathfainding-visualizer/"
+      url: "https://iniguezmarc.github.io/pathfinding-visualizer/"
     }
   ];
 
-  // Floating skills that animate on scroll - based on CV tech stack
   const floatingSkills = [
     { label: "JavaScript", color: "text-blue-600 dark:text-blue-400", speed: 0.5, xOffset: -50 },
     { label: "Node.js", color: "text-green-600 dark:text-green-400", speed: -0.4, xOffset: -30 },
